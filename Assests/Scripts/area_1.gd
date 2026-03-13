@@ -30,13 +30,13 @@ func my_custom_function() -> void:
 
 func _on_button_pressed() -> void:
 	if Global.Balloons >= 10 && Global.MiddlePathUpgradeUnlock == 1:
-		Global.MiddlePathUpgradeUnlock == 2
+		Global.MiddlePathUpgradeUnlock = 2
 		Global.Balloons -= 10
 		Global.DartMonkeySpeed = 0.4
 		MiddlePathUpgrade.text = "Increase monkey c/s, Price: 50 MM"
 		emit_signal("Balloons_changed", Global.Balloons)
 	elif Global.Balloons >= 50 && Global.MiddlePathUpgradeUnlock == 2:
-		Global.MiddlePathUpgradeUnlock == 3
+		Global.MiddlePathUpgradeUnlock = 3
 		Global.Balloons -= 50
 		Global.DartMonkeySpeed = 0.6
 		MiddlePathUpgrade.text = "Triple Damage, Price: 250 MM"
@@ -56,3 +56,5 @@ func _on_balloon_inflater_button_down() -> void:
 func _on_dart_monkey_top_path_button_down() -> void:
 	if Global.Balloons >= Global.DartMonkeyTopPathPrice:
 		Global.Balloons = Global.Balloons - Global.DartMonkeyTopPathPrice
+		
+		print ("Hello")
