@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dcwhdojpde3k7" path="res://Assests/Scripts/area_1.gd" id="1_q3xcx"]
 [ext_resource type="Script" uid="uid://dr4r8vwrfko51" path="res://Assests/Scripts/stats.gd" id="2_ikbq4"]
 [ext_resource type="Texture2D" uid="uid://ckj70h1h6n7sn" path="res://Assests/Sprites/dartmonke.jpg" id="3_mssg7"]
-[ext_resource type="Script" uid="uid://cr1ed08weelyc" path="res://Assests/Scripts/Global.gd" id="4_enge4"]
+[ext_resource type="Script" uid="uid://dtcv4vmvv0oat" path="res://Assests/Scene/Areas/dart_button.gd" id="4_tsau1"]
 [ext_resource type="Texture2D" uid="uid://3dkc3db6io6n" path="res://Assests/Sprites/Balloon infalter.jpg" id="5_a3ea7"]
 [ext_resource type="Texture2D" uid="uid://qpx3ml6nbeuf" path="res://Assests/Sprites/download.jpg" id="6_xco6f"]
 [ext_resource type="Texture2D" uid="uid://bpdv3vdit0vee" path="res://Assests/Sprites/images (2).jpg" id="7_tsau1"]
@@ -69,7 +69,7 @@ layout_mode = 2
 texture_normal = ExtResource("3_mssg7")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("4_enge4")
+script = ExtResource("4_tsau1")
 
 [node name="DartMonkeyLabel" type="Label" parent="." unique_id=509453434]
 layout_mode = 0
@@ -160,7 +160,6 @@ label_settings = SubResource("LabelSettings_tsau1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="Balloons_changed" from="." to="Stats" method="_on_game_balloons_changed"]
 [connection signal="button_down" from="CenterContainer/ClickButton" to="." method="_on_click_button_button_down"]
 [connection signal="button_down" from="DartMonkeyPurchase/DartButton" to="." method="_on_dart_button_button_down"]
 [connection signal="button_down" from="BoxContainer/BalloonInflater" to="." method="_on_balloon_inflater_button_down"]
